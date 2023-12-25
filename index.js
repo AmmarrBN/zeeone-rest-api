@@ -73,10 +73,11 @@ app.use(function(req, res, next) {
 })
 
 app.get('/', (req, res) => {
-    res.render('/views/home', {
+  res.render('home', {
     layout: 'home'
   });
 })
+
 app.get('/docs', isAuthenticated, async(req, res) => {
   let getkey = await getApikey(req.user.id)
   let { apikey, username, limit} = getkey
@@ -87,6 +88,7 @@ app.get('/docs', isAuthenticated, async(req, res) => {
     layout: 'index'
   });
 })
+
 app.get('/cecan', isAuthenticated, async(req, res) => {
   let getkey = await getApikey(req.user.id)
   let { apikey, username } = getkey
