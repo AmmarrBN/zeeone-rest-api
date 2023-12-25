@@ -35,6 +35,7 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
+app.set('views', 'views');
 app.set('view engine', 'ejs');
 app.use(expressLayout);
 app.use(express.static("assets"))
