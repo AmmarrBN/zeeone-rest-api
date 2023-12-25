@@ -35,15 +35,14 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-app.set('views', 'views');
 app.set('view engine', 'ejs');
 app.use(expressLayout);
-app.use(express.static("assets"))
+app.use(express.static("assets"));
 
 app.enable('trust proxy');
-app.set("json spaces",2)
-app.use(cors())
-app.use(secure)
+app.set("json spaces",2);
+app.use(cors());
+app.use(secure);
 
 app.use(session({
   secret: 'secret',  
