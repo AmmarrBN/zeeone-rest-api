@@ -1,10 +1,9 @@
-const fs = require('fs')
-
 global.creator = 'AmmarBN'// yourname
+global.apikey = ["subskira", "testkira"]
 global.MONGO_DB_URI = "mongodb+srv://AmmarBN:VzmTxPWPuJysywAC@cluster0.uxut7jf.mongodb.net/?retryWrites=true&w=majority" //database mongodb 
 global.ACTIVATION_TOKEN_SECRET = "-@Pqnap+@(/1jAPPnew/@10" //isi apa aja bebas
-global.your_email = "akuntumbal8836@gmail.com" //email
-global.email_password = "rxqm ihtp vxhd yycj" //application password email
+global.your_email = "akirzsmurf@gmail.com" //email
+global.email_password = "kovrwpdchokzihyz" //application password email
 global.limitCount = 10000
 global.YUOR_PORT = 8000
 global.loghandler = {
