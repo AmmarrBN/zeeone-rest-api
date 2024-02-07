@@ -1,3 +1,5 @@
+const path = require('path');
+
 __path = process.cwd()
 require("./settings");
 var express = require('express'),
@@ -73,10 +75,10 @@ app.use(function(req, res, next) {
 })
 
 app.get('/', (req, res) => {
-  res.render('home', {
-    layout: 'home'
+  res.render(path.join(__dirname, 'views', 'home'), {
+    layout: path.join(__dirname, 'views', 'home')
   });
-})
+});
 
 app.get('/docs', isAuthenticated, async(req, res) => {
   let getkey = await getApikey(req.user.id)
