@@ -62,7 +62,7 @@ app.use(cookieParser());
 
 app.use(passport.initialize());
 app.use(passport.session());
-require('./lib/config')(passport);
+require('./lib/config.js')(passport);
 
 app.use(flash());
 
@@ -75,8 +75,8 @@ app.use(function(req, res, next) {
 })
 
 app.get('/', (req, res) => {
-  res.render(path.join(__dirname, 'views', 'home'), {
-    layout: path.join(__dirname, 'views', 'home')
+  res.render(path.join(__dirname, 'views', 'home.ejs'), {
+    layout: path.join(__dirname, 'views', 'home.ejs')
   });
 });
 
